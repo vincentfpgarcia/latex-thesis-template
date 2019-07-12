@@ -1,0 +1,77 @@
+% Preambule
+\input{preambule}
+
+% Style: By removing the following line, the style used is the basic book style
+\input{style}
+
+% Document
+\begin{document}
+
+    % Roman numbering
+    \frontmatter 
+
+    % Cover page
+    \include{cover}
+
+    % Table of content
+    \setcounter{secnumdepth}{3}
+    \setcounter{tocdepth}{3}
+    \tableofcontents
+
+    % Acknowledgments
+    \include{acknowledgments}
+
+    % Arabe numbering
+    \mainmatter
+
+    % Introduction
+    \include{introduction}
+
+    % Part 1
+    \cleardoublepage
+    \phantomsection
+    \part{This is the first part of this thesis}
+    \include{chapter_01}
+    \include{chapter_02}
+
+    % Part 2
+    \cleardoublepage
+    \phantomsection
+    \part{This is the second part of this thesis}
+    \include{chapter_03}
+    \include{chapter_04}
+
+    % Conclusion
+    \cleardoublepage
+    \phantomsection
+    \part{Conclusion}
+    \include{conclusion}
+
+    % Annexes
+    \appendix
+    \cleardoublepage
+    \phantomsection
+    \part{Annexes}
+    \include{annexe_01}
+    \include{annexe_02}
+
+    % Liste of figures
+    \cleardoublepage 
+    \phantomsection
+    \addcontentsline{toc}{part}{List of figures}
+    \listoffigures
+
+    % Liste of tables
+    \cleardoublepage 
+    \phantomsection
+    \addcontentsline{toc}{part}{List of tables}
+    \listoftables
+
+    % Bibliography
+    \cleardoublepage 
+    \phantomsection 
+    \addcontentsline{toc}{part}{Bibliography}
+    \bibliography{bibliography}
+    \bibliographystyle{alpha}
+
+\end{document}
